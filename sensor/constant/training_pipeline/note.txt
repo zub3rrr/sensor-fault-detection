@@ -1,0 +1,3 @@
+in this folder every .py file contains the constants these constansts are segregated in terms of their usage .
+So Dont get confuse between training_pipeline and pipeline folder in root directory
+because training_pipeline file will only contains the constants wheres in pipeline actual operation in code
