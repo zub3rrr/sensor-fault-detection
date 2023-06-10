@@ -11,11 +11,12 @@ from typing import List
    
 #   return requirement_list
 
-requirements_path = r'./requirements.txt'
-def read_requirements_file(file_path):
-    with open(file_path, 'r') as file:
-        requirements = file.read().splitlines()
-    return requirements
+# requirements_path = r'./requirements.txt'
+# def read_requirements_file(file_path):
+#     with open(file_path, 'r') as file:
+#         requirements = file.read().splitlines()
+#     file.close()
+#     return requirements
 
 
 
@@ -25,7 +26,7 @@ setup(
   version="0.0.1",
   author_email="xuberswork@gmail.com",
   # packages=find_packages(),   
-  install_requires=read_requirements_file(requirements_path),  
+  # install_requires=read_requirements_file(requirements_path),  
 )
 
 # #or else employ using -e . in requirements.txt
