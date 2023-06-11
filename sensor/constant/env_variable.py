@@ -1,1 +1,5 @@
-MONGODB_URL_KEY = "mongodb://localhost:27017"
+MONGODB_URL_KEY = "mongodb://localhost:27017/"
+
+
+
+
