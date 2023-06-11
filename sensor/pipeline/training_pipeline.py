@@ -9,7 +9,7 @@ import os
 from sensor.logger import logging
 from sensor.logger.logging import *
 
-# from sensor.components.data_ingestion import DataIngestion
+from sensor.components.data_ingestion import DataIngestion
 # from sensor.components.data_validation import DataValidation
 # from sensor.components.data_transformation import DataTransformation
 # from sensor.components.model_trainer import ModelTrainer
@@ -31,12 +31,11 @@ class TrainPipeline:
     def start_data_ingestion(self)->DataIngestionArtifact:
         try:
             logging.info("Starting data ingestion")
-            # data_ingestion = DataIngestion(data_ingestion_config=self.data_ingestion_config)
-            # data_ingestion_artifact = data_ingestion.initiate_data_ingestion()
-            logging.info("Data Ingestation Completed")
-            
-            # logging.info(f"Data ingestion completed and artifact: {data_ingestion_artifact}")
-            # return data_ingestion_artifact
+            data_ingestion = DataIngestion(data_ingestion_config=self.data_ingestion_config)
+            data_ingestion_artifact = data_ingestion.initiate_data_ingestion()
+            # logging.info("Data Ingestation Completed")
+            logging.info(f"Data ingestion completed and artifact: {data_ingestion_artifact}")
+            return data_ingestion_artifact
         except Exception as e:
             raise SensorException(e, sys)
 
