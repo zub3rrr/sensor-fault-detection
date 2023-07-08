@@ -2,6 +2,11 @@
 __pycache__/
 *.py[cod]
 *$py.class
+#to ignore data generated from process
+artifact  
+
+
+
 
 # C extensions
 *.so
