@@ -25,6 +25,13 @@ class SensorData:
 
 
     def save_csv_file(self,file_path ,collection_name: str, database_name: Optional[str] = None):
+        """
+        In summary, the code reads data from a CSV file, transforms it into a list of dictionaries, 
+        and inserts the data into a MongoDB collection.The code provides flexibility in specifying 
+        the database and collection names.
+        
+        
+        """
         try:
             data_frame=pd.read_csv(file_path)
             data_frame.reset_index(drop=True, inplace=True)
