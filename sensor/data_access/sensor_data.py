@@ -23,17 +23,16 @@ class SensorData:
         except Exception as e:
             raise SensorException(e, sys)
 
-
-    def save_csv_file(self,file_path ,collection_name: str, database_name: Optional[str] = None):
+    def save_csv_file(self, file_path, collection_name: str, database_name: Optional[str] = None):
         """
         In summary, the code reads data from a CSV file, transforms it into a list of dictionaries, 
         and inserts the data into a MongoDB collection.The code provides flexibility in specifying 
         the database and collection names.
-        
-        
+
+
         """
         try:
-            data_frame=pd.read_csv(file_path)
+            data_frame = pd.read_csv(file_path)
             data_frame.reset_index(drop=True, inplace=True)
             records = list(json.loads(data_frame.T.to_json()).values())
             if database_name is None:
@@ -45,9 +44,8 @@ class SensorData:
         except Exception as e:
             raise SensorException(e, sys)
 
-
     def export_collection_as_dataframe(
-        self, collection_name: str, database_name: Optional[str] = None) -> pd.DataFrame:
+            self, collection_name: str, database_name: Optional[str] = None) -> pd.DataFrame:
         try:
             """
             export entire collectin as dataframe:
