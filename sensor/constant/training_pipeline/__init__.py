@@ -1,7 +1,7 @@
 import os
 # from sensor.constant.s3_bucket import TRAINING_BUCKET_NAME
 
-SAVED_MODEL_DIR =os.path.join("saved_models")
+SAVED_MODEL_DIR = os.path.join("saved_models")
 
 
 # defining common constant variable for training pipeline
@@ -50,20 +50,20 @@ DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = "transformed_object"
 Model Trainer ralated constant start with MODE TRAINER VAR NAME
 """
 
-# MODEL_TRAINER_DIR_NAME: str = "model_trainer"
-# MODEL_TRAINER_TRAINED_MODEL_DIR: str = "trained_model"
-# MODEL_TRAINER_TRAINED_MODEL_NAME: str = "model.pkl"
-# MODEL_TRAINER_EXPECTED_SCORE: float = 0.6
-# MODEL_TRAINER_OVER_FIITING_UNDER_FITTING_THRESHOLD: float = 0.05
+MODEL_TRAINER_DIR_NAME: str = "model_trainer"
+MODEL_TRAINER_TRAINED_MODEL_DIR: str = "trained_model"
+MODEL_TRAINER_TRAINED_MODEL_NAME: str = "model.pkl"
+MODEL_TRAINER_EXPECTED_SCORE: float = 0.6
+MODEL_TRAINER_OVER_FITTING_UNDER_FITTING_THRESHOLD: float = 0.05
 
 
 """
 Model Trainer ralated constant start with MODE TRAINER VAR NAME
 """
-# MODEL_EVALUATION_DIR_NAME: str = "model_evaluation"
-# MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02
-# MODEL_EVALUATION_REPORT_NAME= "report.yaml"
+MODEL_EVALUATION_DIR_NAME: str = "model_evaluation"
+MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02
+MODEL_EVALUATION_REPORT_NAME = "report.yaml"
 
 
-# MODEL_PUSHER_DIR_NAME = "model_pusher"
-# MODEL_PUSHER_SAVED_MODEL_DIR = SAVED_MODEL_DIR
+MODEL_PUSHER_DIR_NAME = "model_pusher"
+MODEL_PUSHER_SAVED_MODEL_DIR = SAVED_MODEL_DIR
